@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('admissions', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('course_interested');
+            $table->text('message')->nullable();
             $table->timestamps();
         });
     }

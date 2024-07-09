@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('gallaries', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->text('description')->nullable();
+            $table->string('url'); // URL or path to the photo
             $table->timestamps();
         });
     }

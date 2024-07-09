@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('teams', function (Blueprint $table) {
+        Schema::create('video_gallaries', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('position');
-            $table->text('bio')->nullable();
-            $table->string('photo_url')->nullable(); // URL or path to the team member's photo
+            $table->string('title');
+            $table->text('description')->nullable();
+            $table->string('url'); // URL or path to the video
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('teams');
+        Schema::dropIfExists('video_gallaries');
     }
 };
