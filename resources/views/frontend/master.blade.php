@@ -14,6 +14,7 @@
         @include('frontend.body.navbar')
 
         <!-- main area  -->
+
         @yield('frontend.main')
 
         <!-- footer here  -->

@@ -1,4 +1,5 @@
- @section('main')
+@extends('frontend.master')
+@section('frontend.main')
  <!-- Start Main Slider -->
  <section class="main-slider style1">
      <div class="slider-box">
