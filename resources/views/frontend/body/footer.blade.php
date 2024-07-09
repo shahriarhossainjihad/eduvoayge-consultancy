@@ -8,7 +8,7 @@
                             <div class="single-footer-widget marbtm">
                                 <div class="our-company-info">
                                     <!-- <div class="footer-logo">
-                                        <a href="#"><img src="assets/images/resources/sticky-logo.png"
+                                        <a href="#"><img src="{{asset('frontend')}}/assets/images/resources/sticky-logo.png"
                                                 alt="Awesome Footer Logo" height="120" width="120" title="Logo"></a>
                                     </div> -->
                                     <div class="text">

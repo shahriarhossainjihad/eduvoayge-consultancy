@@ -19,7 +19,7 @@
                         <!--Start Header Left-->
                         <div class="header-left clearfix pull-left">
                             <div class="logo">
-                                <a href="#"><img src="assets/images/resources/logo.png" class="img-fluid img_size" height="100" width="100" alt="Awesome Logo"
+                                <a href="#"><img src="{{asset('frontend')}}/assets/images/resources/logo.png" class="img-fluid img_size" height="100" width="100" alt="Awesome Logo"
                                         title=""></a>
                             </div>
                         </div>
@@ -164,7 +164,7 @@
                         <!--Logo-->
                         <div class="logo float-left">
                             <a href="#" class="img-responsive img-fluid"><img
-                                    src="assets/images/resources/sticky-logo.png" height="100" width="100" alt="" title=""></a>
+                                    src="{{asset('frontend')}}/assets/images/resources/sticky-logo.png" height="100" width="100" alt="" title=""></a>
                         </div>
                         <!--Right Col-->
                         <div class="right-col float-right">
@@ -184,7 +184,7 @@
                 <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
 
                 <nav class="menu-box">
-                    <div class="nav-logo"><a href="#"><img src="assets/images/resources/logo.png" alt=""
+                    <div class="nav-logo"><a href="#"><img src="{{asset('frontend')}}/assets/images/resources/logo.png" alt=""
                                 title=""></a></div>
                     <div class="menu-outer">
                         <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->

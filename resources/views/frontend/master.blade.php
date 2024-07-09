@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- css import  -->
- @import('frontend.body.css')
+
+<head>
+    <!-- css import  -->
+    @include('frontend.body.css')
+</head>
+
+
 <body>
-<div class="boxed_wrapper">
-<div class="preloader"></div>
-<!-- navbar here  -->
-@import('frontend.body.navbar')
+    <div class="boxed_wrapper">
+        <div class="preloader"></div>
+        <!-- navbar here  -->
+        @include('frontend.body.navbar')
 
-    <!-- main area  -->
-     @yield('frontend.main')  
-      
-<!-- footer here  -->
-@import('frontend.body.footer')
-</div>
+        <!-- main area  -->
+        @yield('frontend.main')
 
-<!-- Javascript  -->
-@import('frontend.body.javascript')
+        <!-- footer here  -->
+        @include('frontend.body.footer')
+    </div>
+
+    <!-- Javascript  -->
+    @include('frontend.body.javascript')
 </body>
+
 </html>
