@@ -7,12 +7,12 @@
          <div class="banner-carousel owl-theme owl-carousel">
              <!-- Slide -->
              <div class="slide">
-                 <div class="image-layer" style="background-image: url('{{ asset('frontend/assets/images/slides/slide-v1-3.jpg') }}')">
+                 <div class="image-layer" style="background-image: url('{{ asset('frontend/assets/images/slides/slide-v1-2.jpg') }}')">
                  </div>
                  <div class="auto-container">
                      <div class="content right">
                          <h3>High-Class Professionals</h3>
-                         <h2>We Are Most Trusted<br> Educational Agency</h2>
+                         <h2>We Are Most Trusted<br> Educational Consultancy</h2>
                          <div class="btns-box">
                              <a class="btn-one" href="#"><span class="txt">Discover More</span></a>
                          </div>
@@ -21,12 +21,40 @@
              </div>
              <!-- Slide -->
              <div class="slide">
-                 <div class="image-layer" style="background-image:url({{asset('frontend')}}/assets/images/slides/slide-v1-2.jpg)">
+                 <div class="image-layer" style="background-image:url({{asset('frontend')}}/assets/images/slides/slide-v1-3.jpg)">
                  </div>
                  <div class="auto-container">
                      <div class="content">
                          <h3>Welcome To the Eduvoyage</h3>
                          <h2>Change Your Life<br> with Eduvoyage</h2>
+                         <div class="btns-box">
+                             <a class="btn-one" href="#"><span class="txt">Discover More</span></a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!-- Slide -->
+             <div class="slide">
+                 <div class="image-layer" style="background-image: url('{{ asset('frontend/assets/images/slides/slide-v1-4.jpg') }}')">
+                 </div>
+                 <div class="auto-container">
+                     <div class="content right">
+                         <h3>Embrace New Beginnings with Eduvoyage.</h3>
+                         <h2>Step into a Brighter Future with Eduvoyage.</h2>
+                         <div class="btns-box">
+                             <a class="btn-one" href="#"><span class="txt">Discover More</span></a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!-- Slide -->
+             <div class="slide">
+                 <div class="image-layer" style="background-image:url({{asset('frontend')}}/assets/images/slides/slide-v1-1.jpg)">
+                 </div>
+                 <div class="auto-container">
+                     <div class="content">
+                         <h3>Build Your Future with Eduvoyage</h3>
+                         <h2>Transform Your Dreams Into Reality <br> with Eduvoyage</h2>
                          <div class="btns-box">
                              <a class="btn-one" href="#"><span class="txt">Discover More</span></a>
                          </div>
@@ -101,7 +129,7 @@
      <div class="container">
          <div class="sec-title text-center">
              <h3>Our Services</h3>
-             <h2>With Eduvoyeg Immigration Visa<br> <span>Service We Provide.</span></h2>
+             <h2>With Eduvoyage Immigration Visa<br> <span>Service We Provide.</span></h2>
          </div>
          <div class="row">
              <div class="col-xl-12">
@@ -195,17 +223,19 @@
      <div class="container">
          <div class="row">
              <div class="col-xl-6">
+
                  <div class="choose-left-box">
-                     <div class="border-box paroller"></div>
-                     <div class="border-box2 paroller"></div>
-                     <div class="video-holder-box" style="background-image: url({{asset('frontend')}}/assets/images/resources/video-gallery-bg.jpg)">
-                         <div class="icon">
-                             <a class="video-popup" title="Auto Repair Fastfix Video Gallery" href="https://www.youtube.com/watch?v=p25gICT63ek">
-                                 <span class="flaticon-play-button"></span>
-                             </a>
-                         </div>
-                     </div>
-                 </div>
+                    <div class="border-box paroller"></div>
+                    <div class="border-box2 paroller"></div>
+                    <div class="video-holder-box" style="background-image: url({{asset('frontend')}}/assets/images/resources/video-gallery-bg.jpg)">
+                        <div class="icon">
+                            <a class="video-popup" title="Auto Repair Fastfix Video Gallery" href="{{asset('frontend/assets/images/resources/1.mp4')}}">
+                                <span class="flaticon-play-button"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
              </div>
              <div class="col-xl-6">
                  <div class="choose-content-box">

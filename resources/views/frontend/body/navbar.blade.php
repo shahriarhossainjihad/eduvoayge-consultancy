@@ -11,7 +11,7 @@
                     }
 
                     .f_10{
-                        font-size: 10px;
+                        font-size: 14px !important;
                     }
                 </style>
                 <div class="container">
@@ -43,8 +43,8 @@
                                                 <span class="flaticon-countdown thm-clr"></span>
                                             </div>
                                             <div class="title">
-                                                <h3>Office Timeing</h3>
-                                                <p>Sat - Thus: 9.30am To 7.00pm</p>
+                                                <h3>Open Hours</h3>
+                                                <p>Mon - Sat: 9.00am To 18.00pm</p>
                                             </div>
                                         </li>
                                         <li>
@@ -52,7 +52,7 @@
                                                 <span class="flaticon-email thm-clr"></span>
                                             </div>
                                             <div class="title">
-                                                <h3><a href="tel:123456789">+8801747141315</a></h3>
+                                                <h3><a href="tel:123456789">+79635531257, +8801747141315</a></h3>
                                                 <p><a href="#m">eduvoyageeducationconsultancy@gmail.com</a></p>
                                             </div>
                                         </li>
@@ -62,11 +62,11 @@
                             <div class="bottom clearfix">
                                 <div class="left pull-left">
                                     <ul class="header-menu">
-                                        <li><a href="#">Help Desk<i class="fa fa-angle-double-right"
-                                                    aria-hidden="true"></i></a></li>
+                                        {{-- <li><a href="#">Help Desk<i class="fa fa-angle-double-right"
+                                                    aria-hidden="true"></i></a></li> --}}
                                         <li><a href="#">Get A Free Quote<i class="fa fa-angle-double-right"
                                                     aria-hidden="true"></i></a></li>
-                                        <li><a href="#">Our Onlilne Shop<i class="fa fa-angle-double-right"
+                                        <li><a href="#">Study Materials<i class="fa fa-angle-double-right"
                                                     aria-hidden="true"></i></a></li>
                                         <li><a href="#">Apply Now<i class="fa fa-angle-double-right"
                                                     aria-hidden="true"></i></a></li>
@@ -76,10 +76,10 @@
                                     <div class="header-social-link">
                                         <ul>
                                             <li>
-                                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                                <a href="https://www.facebook.com/hshshhdhdhdhdh?mibextid=ZbWKwL" target="blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                             </li>
                                             <li>
-                                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                                <a href="https://youtube.com/@lifeisverybeautiful3964?si=KSud6WTklXTYSAA5" target="blank"><i class="fa fa-youtube"></i></a>
                                             </li>
                                             <li>
                                                 <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -118,9 +118,13 @@
                                     <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                         <ul class="navigation clearfix">
                                             <li class="dropdown current"><a href="#">Home</a> </li>
-                                            <li class="dropdown"><a href="#">Coaching</a> </li>
+                                            <li class="dropdown"><a href="#">About</a> </li>
+                                            <li class="dropdown"><a href="#">Admission</a> </li>
                                             <li class="dropdown"><a href="#">Visa</a> </li>
-                                            <li><a href="#">Countery</a></li>
+                                            <li><a href="#">Country</a></li>
+                                            {{-- <li class="dropdown"><a href="#"></a> </li> --}}
+                                            <li class="dropdown"><a href="#">gallery</a> </li>
+                                            <li class="dropdown"><a href="#">videos</a> </li>
                                             <li class="dropdown"><a href="#">Blog</a> </li>
                                             <li><a href="#">Contact</a></li>
                                         </ul>
