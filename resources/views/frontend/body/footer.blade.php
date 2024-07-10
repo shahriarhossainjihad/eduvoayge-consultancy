@@ -12,17 +12,17 @@
                                                 alt="Awesome Footer Logo" height="120" width="120" title="Logo"></a>
                                     </div> -->
                                     <div class="text">
-                                        <p>Eduvoyeg provides the simplest solution for processing your all types of visa.
+                                        <p>Eduvoyage provides the simplest solution for processing your all types of visa.
                                             Say good bye to end less hassles and confusions. There anyone who loves or
                                             pursues not some great to have pleasure.</p>
                                     </div>
                                     <div class="footer-social-links">
                                         <ul>
                                             <li>
-                                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                                <a href="https://www.facebook.com/hshshhdhdhdhdh?mibextid=ZbWKwL" target="blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                             </li>
                                             <li>
-                                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                                <a href="https://youtube.com/@lifeisverybeautiful3964?si=KSud6WTklXTYSAA5" target="blank"><i class="fa fa-youtube"></i></a>
                                             </li>
                                             <li>
                                                 <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -43,19 +43,24 @@
                                     <h3>Countries</h3>
                                 </div>
                                 <ul class="countries-links">
+                                    <li><a href="#">Russia</a></li>
+                                    <li><a href="#">Kyrgyzstan</a></li>
+                                    <li><a href="#">China</a></li>
+                                    <li><a href="#">Dubai</a></li>
+                                    <li><a href="#">USA</a></li>
+                                    <li><a href="#">Italy</a></li>
                                     <li><a href="#">Canada</a></li>
-                                    <li><a href="#">United States</a></li>
-                                    <li><a href="#">United Kingdom</a></li>
-                                    <li><a href="#">Australia</a></li>
-                                    <li><a href="#">New Zealand</a></li>
+                                    {{-- <li><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
                                     <li><a href="#">Singapore</a></li>
-                                    <li><a href="#">South Africa</a></li>
+                                    <li><a href="#">Oman </a></li>
+                                    <li><a href="#"></a></li> --}}
                                 </ul>
                             </div>
                         </div>
                         <!--End single footer widget-->
                         <!--Start single footer widget-->
-                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.5s">
+                        <div class="col-xl-2 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.5s">
                             <div class="single-footer-widget martop10 marlef20">
                                 <div class="title">
                                     <h3>Visas Types</h3>
@@ -67,15 +72,14 @@
                                     <li><a href="#">Travel Visa</a></li>
                                     <li><a href="#">Work Visa</a></li>
                                     <li><a href="#">Visitor Visa</a></li>
-                                    <li><a href="#">Eduvoyeg Visa</a></li>
                                 </ul>
                             </div>
                         </div>
                         <!--End single footer widget-->
                         <!--Start single footer widget-->
-                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.7s">
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.7s">
                             <div class="single-footer-widget pdtop martop10">
-                                <div class="title">
+                                <div class="ms-2 title">
                                     <h3>Contact</h3>
                                 </div>
                                 <div class="footer-contact-info">
@@ -84,11 +88,9 @@
                                             <div class="icon">
                                                 <span class="flaticon-worldwide thm-clr"></span>
                                             </div>
-                                            <div class="text ">
-                                                <h4>Krasnormeskaya, <br>
-                                                    Road 31
-                                                    </h4>
-                                                <p>Kirov State,Russia</p>
+                                            <div class="text">
+                                                <p>Krasnormeskaya, Road 31, Kirov State,Russia</p>
+                                                <p>Moon super Market, Ullapara, Sirajganj</p>
                                             </div>
                                         </li>
                                         <li>
@@ -106,7 +108,7 @@
                                             </div>
                                             <div class="text">
                                                 <h4>Working Hours</h4>
-                                                <p>Sat-Thus: 9.30am To 7.00pm</p>
+                                                <p>Mon - Sat: 9.00am To 18.00pm</p>
                                             </div>
                                         </li>
                                     </ul>
