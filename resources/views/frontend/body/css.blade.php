@@ -1,12 +1,6 @@
 
-<head>
-    <meta charset="UTF-8">
-    <title>Eduvoyage Education Consultancy</title>
 
-    <!-- responsive meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- For IE -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
 
     <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/aos.css">
     <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/bootstrap.min.css">
@@ -34,4 +28,3 @@
         <script src="{{asset('frontend')}}/assets/js/html5shiv.js"></script>
     <!-- <![endif] -->
 
-</head>

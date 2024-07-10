@@ -21,7 +21,7 @@
              </div>
              <!-- Slide -->
              <div class="slide">
-                 <div class="image-layer" style="background-image:url({{asset('frontend')}}/assets/images/slides/slide-v1-2.jpg)">
+                 <div class="image-layer" style="background-image: url({{asset('frontend')}}/assets/images/slides/slide-v1-2.jpg)">
                  </div>
                  <div class="auto-container">
                      <div class="content">
