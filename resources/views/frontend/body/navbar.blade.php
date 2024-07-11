@@ -118,12 +118,12 @@
                                     <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                         <ul class="navigation clearfix">
                                             <li class="dropdown current"><a href="#">Home</a> </li>
-                                            <li class="dropdown"><a href="#">About</a> </li>
-                                            <li class="dropdown"><a href="#">Admission</a> </li>
+                                            <li class="dropdown"><a href="{{ route('about') }}">About</a> </li>
+                                            <li class="dropdown"><a href="{{ route('admission') }}">Admission</a> </li>
                                             <li class="dropdown"><a href="#">Visa</a> </li>
                                             <li><a href="#">Country</a></li>
                                             {{-- <li class="dropdown"><a href="#"></a> </li> --}}
-                                            <li class="dropdown"><a href="#">gallery</a> </li>
+                                            <li class="dropdown"><a href="{{ route('gallary') }}">gallery</a> </li>
                                             <li class="dropdown"><a href="#">videos</a> </li>
                                             <li class="dropdown"><a href="#">Blog</a> </li>
                                             <li><a href="#">Contact</a></li>

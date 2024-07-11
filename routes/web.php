@@ -7,6 +7,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('frontend.main');
 });
+Route::get('/about', function () {
+    return view('frontend.about');
+})->name('about');
+Route::get('/gallary', function () {
+    return view('frontend.gallary');
+})->name('gallary');
+Route::get('/admission', function () {
+    return view('frontend.admission');
+})->name('admission');
 
 Route::get('/dashboard', function () {
     return view('backend.dashboard');
@@ -18,7 +27,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 
-    // Gallery Controller 
+    // Gallery Controller
     Route::controller(GallaryController::class)->group(function () {
         Route::get('/galary', 'index')->name('galary');
         Route::post('/galary/store', 'store')->name('galary.store');
