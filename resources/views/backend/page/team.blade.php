@@ -3,7 +3,7 @@
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+        <li class="breadcrumb-item active" aria-current="page">Team</li>
     </ol>
 </nav>
 <div class="row">
@@ -11,17 +11,18 @@
         <div class="card">
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h6 class="card-title">Gallery Table</h6>
-                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalLongScollable">Add Gallery</button>
+                    <h6 class="card-title">Team Table</h6>
+                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalLongScollable">Add Team</button>
                 </div>
                 <div id="" class="table-responsive">
                     <table id="dataTableExample" class="table">
                         <thead>
                             <tr>
                                 <th>SN</th>
-                                <th>Title</th>
-                                <th>Description</th>
                                 <th>Image</th>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Bio</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -39,28 +40,33 @@
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalScrollableTitle">Add Gallery Info</h5>
+                <h5 class="modal-title" id="exampleModalScrollableTitle">Add Team Info</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="btn-close"></button>
             </div>
             <div class="modal-body">
-                <form class="gallaryAddForm" enctype="multipart/form-data">
+                <form class="teamAddForm" enctype="multipart/form-data">
                     <div class="mb-3">
-                        <label for="name" class="form-label">Title</label>
-                        <input class="form-control title" name="name" type="text" onkeyup="errorRemove(this);" onblur="errorRemove(this);">
-                        <span class="text-danger title_error"></span>
+                        <label for="name" class="form-label">Name</label>
+                        <input class="form-control name" name="name" type="text" onkeyup="errorRemove(this);" onblur="errorRemove(this);">
+                        <span class="text-danger name_error"></span>
                     </div>
                     <div class="mb-3">
-                        <label for="name" class="form-label">Description</label>
-                        <textarea id="" class="form-control description" name="description"></textarea>
+                        <label for="name" class="form-label">Position</label>
+                        <input class="form-control position" name="position" type="text" onkeyup="errorRemove(this);" onblur="errorRemove(this);">
+                        <span class="text-danger position_error"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Bio</label>
+                        <textarea id="" class="form-control bio" name="bio"></textarea>
                     </div>
                     <div class="mb-3">
                         <div class="card">
                             <div class="card-body">
-                                <h6 class="card-title">Gallery Image</h6>
+                                <h6 class="card-title">Team Member Image</h6>
                                 <p class="mb-3 text-warning">Note: <span class="fst-italic">Image not
                                         required. If you
                                         add
-                                        a category image
+                                        a Team Member image
                                         please add a 400 X 400 size image.</span></p>
                                 <input type="file" class="image" name="image" id="myDropify" />
                             </div>
@@ -70,7 +76,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary save_gallery">Save</button>
+                <button type="button" class="btn btn-primary save_team">Save</button>
             </div>
         </div>
     </div>
@@ -83,24 +89,29 @@
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalScrollableTitle">Add Gallery Info</h5>
+                <h5 class="modal-title" id="exampleModalScrollableTitle">Update Team Info</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="btn-close"></button>
             </div>
             <div class="modal-body">
-                <form class="gallaryEditForm" enctype="multipart/form-data">
+                <form class="teamEditForm" enctype="multipart/form-data">
                     <div class="mb-3">
-                        <label for="name" class="form-label">Title</label>
-                        <input class="form-control edit_title" name="name" type="text" onkeyup="errorRemove(this);" onblur="errorRemove(this);">
-                        <span class="text-danger edit_title_error"></span>
+                        <label for="name" class="form-label">Name</label>
+                        <input class="form-control edit_name" name="name" type="text" onkeyup="errorRemove(this);" onblur="errorRemove(this);">
+                        <span class="text-danger edit_name_error"></span>
                     </div>
                     <div class="mb-3">
-                        <label for="name" class="form-label">Description</label>
-                        <textarea name="description" id="" class="form-control edit_description"></textarea>
+                        <label for="name" class="form-label">Position</label>
+                        <input class="form-control edit_position" name="position" type="text" onkeyup="errorRemove(this);" onblur="errorRemove(this);">
+                        <span class="text-danger edit_position_error"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Bio</label>
+                        <textarea name="bio" class="form-control edit_bio"></textarea>
                     </div>
                     <div class="mb-3">
                         <div class="card">
                             <div class="card-body">
-                                <h6 class="card-title">Gallery Image</h6>
+                                <h6 class="card-title">Team Image</h6>
                                 <div style="height:150px;position:relative">
                                     <button class="btn btn-info edit_upload_img" style="position: absolute;top:50%;left:50%;transform:translate(-50%,-50%)">Browse</button>
                                     <img class="img-fluid showEditImage" src="" style="height:100%; object-fit:cover">
@@ -113,7 +124,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary update_galary">Update</button>
+                <button type="button" class="btn btn-primary update_team">Update</button>
             </div>
         </div>
     </div>
@@ -141,7 +152,7 @@
             $(`${name}_error`).show().text(message);
         }
 
-        // image onload when brand edit
+        // image onload when Team edit
         const edit_upload_img = document.querySelector('.edit_upload_img');
         const edit_image = document.querySelector('.edit_image');
         edit_upload_img.addEventListener('click', function(e) {
@@ -157,18 +168,18 @@
             });
         });
 
-        // save Gallery
-        const saveGallery = document.querySelector('.save_gallery');
-        saveGallery.addEventListener('click', function(e) {
+        // save Team
+        const saveTeam = document.querySelector('.save_team');
+        saveTeam.addEventListener('click', function(e) {
             e.preventDefault();
-            let formData = new FormData($('.gallaryAddForm')[0]);
+            let formData = new FormData($('.teamAddForm')[0]);
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
             $.ajax({
-                url: '/galary/store',
+                url: '/team/store',
                 type: 'POST',
                 data: formData,
                 processData: false,
@@ -176,13 +187,19 @@
                 success: function(res) {
                     if (res.status == 200) {
                         $('#exampleModalLongScollable').modal('hide');
-                        $('.gallaryAddForm')[0].reset();
+                        $('.teamAddForm')[0].reset();
                         toastr.success(res.message);
-                        galaryView();
+                        teamView();
                     } else {
                         if (res.error.name) {
                             showError('.name', res.error.name);
                         }
+                        if (res.error.position) {
+                            showError('.position', res.error.position);
+                        }
+                        // if (res.error.bio) {
+                        //     showError('.bio', res.error.bio);
+                        // }
                     }
                 }
             });
@@ -190,32 +207,32 @@
 
 
         // show all Data 
-        function galaryView() {
+        function teamView() {
             // console.log('hello');
             $.ajax({
-                url: '/galary/view',
+                url: '/team/view',
                 method: 'GET',
                 success: function(res) {
-                    const galary = res.data;
-                    // console.log(galary);
+                    const teams = res.data;
+                    // console.log(team);
                     $('.showData').empty();
-                    if (galary.length > 0) {
-                        $.each(galary, function(index, bank) {
+                    if (teams.length > 0) {
+                        $.each(teams, function(index, team) {
                             // Calculate the sum of account_transaction balances
                             const tr = document.createElement('tr');
                             tr.innerHTML = `
                                     <td>${index + 1}</td>
-                                    <td>${bank.title ?? ""}</td>
-                                    <td>${bank.description ?? ""}</td>
                                     <td>
-                                     <img src="${bank.url ? `/uploads/galary/` + bank.url : `/dummy/image.jpg`}" alt="cat Image">
+                                     <img src="${team.photo_url ? `/uploads/team/` + team.photo_url : `/dummy/image.jpg`}" alt="cat Image">
                                     </td>
+                                    <td>${team.name	 ?? ""}</td>
+                                    <td>${team.position ?? ""}</td>
+                                    <td>${team.bio ?? ""}</td>
                                     <td>
-                                    
-                                       <a href="#" class="btn btn-primary btn-icon btn-sm galary_edit" data-id=${bank.id} data-bs-toggle="modal" data-bs-target="#edit">
+                                       <a href="#" class="btn btn-primary btn-icon team_edit" data-id=${team.id} data-bs-toggle="modal" data-bs-target="#edit">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                     </a>
-                                           <a href="#" class="btn btn-danger btn-icon btn-sm galary_delete" data-id=${bank.id}>
+                                           <a href="#" class="btn btn-danger btn-icon team_delete" data-id=${team.id}>
                                     <i class="fa-solid fa-trash-can"></i>
                                     </a>
                                     </td>
@@ -228,7 +245,7 @@
                                 <td colspan='9'>
                                     <div class="text-center text-warning mb-2">Data Not Found</div>
                                     <div class="text-center">
-                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLongScollable">Add Gallery Info<i data-feather="plus"></i></button>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLongScollable">Add Team Info<i data-feather="plus"></i></button>
                                     </div>
                                 </td>
                             </tr>
@@ -237,13 +254,13 @@
                 }
             });
         }
-        galaryView();
+        teamView();
 
 
 
 
         // edit brand
-        $(document).on('click', '.galary_edit', function(e) {
+        $(document).on('click', '.team_edit', function(e) {
             e.preventDefault();
             // alert('ok');
             let id = this.getAttribute('data-id');
@@ -254,21 +271,26 @@
                 }
             });
             $.ajax({
-                url: `/galary/edit/${id}`,
+                url: `/team/edit/${id}`,
                 type: 'GET',
                 success: function(data) {
-                    // console.log(data.brand.name);
-                    $('.edit_title').val(data.galary.title);
+                    const team = data.team;
+                    $('.edit_name').val(team.name);
 
-                    $('.update_galary').val(data.galary.id);
-                    if (data.galary.description) {
-                        $('.edit_description').val(data.galary.description);
+                    $('.update_team').val(team.id);
+                    if (team.position) {
+                        $('.edit_position').val(team.position);
                     } else {
-                        $('.edit_description').val('');
+                        $('.edit_position').val('');
                     }
-                    if (data.galary.url) {
+                    if (team.bio) {
+                        $('.edit_bio').val(team.bio);
+                    } else {
+                        $('.edit_bio').val('');
+                    }
+                    if (team.photo_url) {
                         $('.showEditImage').attr('src',
-                            'http://127.0.0.1:8000/uploads/galary/' + data.galary.url);
+                            'http://127.0.0.1:8000/uploads/team/' + team.photo_url);
                     } else {
                         $('.showEditImage').attr('src',
                             'http://127.0.0.1:8000/dummy/image.jpg');
@@ -278,71 +300,79 @@
         })
 
 
-        // update galary
-        $('.update_galary').click(function(e) {
-                e.preventDefault();
-                let id = $(this).val();
-                let formData = new FormData($('.gallaryEditForm')[0]);
-                $.ajaxSetup({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    }
-                });
-                $.ajax({
-                    url: `/galary/update/${id}`,
-                    type: 'POST',
-                    data: formData,
-                    processData: false,
-                    contentType: false,
-                    success: function(res) {
-                        if (res.status == 200) {
-                            $('#edit').modal('hide');
-                            $('.gallaryEditForm')[0].reset();
-                            galaryView();
-                            toastr.success(res.message);
-                        } else {
-                            showError('.edit_category_name', res.error.name)
+        // update team
+        $('.update_team').click(function(e) {
+            e.preventDefault();
+            let id = $(this).val();
+            let formData = new FormData($('.teamEditForm')[0]);
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url: `/team/update/${id}`,
+                type: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(res) {
+                    if (res.status == 200) {
+                        $('#edit').modal('hide');
+                        $('.teamEditForm')[0].reset();
+                        teamView();
+                        toastr.success(res.message);
+                    } else {
+                        if (res.error.name) {
+                            showError('.edit_name', res.error.name);
                         }
+                        if (res.error.position) {
+                            showError('.edit_position', res.error.position);
+                        }
+                        // if (res.error.bio) {
+                        //     showError('.edit_bio', res.error.bio);
+                        // }
                     }
-                });
-            })
+                }
+            });
+        })
 
-            // gallery Delete
-            $(document).on('click', '.galary_delete', function(e) {
-                e.preventDefault();
-                // alert("ok")
-                let id = this.getAttribute('data-id');
+        // gallery Delete
+        $(document).on('click', '.team_delete', function(e) {
+            e.preventDefault();
+            // alert("ok")
+            let id = this.getAttribute('data-id');
 
-                Swal.fire({
-                    title: "Are you sure?",
-                    text: "You won't be able to Delete this!",
-                    icon: "warning",
-                    showCancelButton: true,
-                    confirmButtonColor: "#3085d6",
-                    cancelButtonColor: "#d33",
-                    confirmButtonText: "Yes, delete it!"
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        $.ajaxSetup({
-                            headers: {
-                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to Delete this Team Member",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }
+                    });
+                    $.ajax({
+                        url: `/team/destroy/${id}`,
+                        type: 'GET',
+                        success: function(res) {
+                            if (res.status == 200) {
+                                toastr.success(res.message);
+                                teamView();
+                            } else {
+                                toastr.warning(res.message);
                             }
-                        });
-                        $.ajax({
-                            url: `/galary/destroy/${id}`,
-                            type: 'GET',
-                            success: function(res) {
-                                if (res.status == 200) {
-                                    toastr.success(res.message);
-                                    galaryView();
-                                } else {
-                                    toastr.warning(res.message);
-                                }
-                            }
-                        });
-                    }
-                });
-            })
+                        }
+                    });
+                }
+            });
+        })
 
     })
 </script>

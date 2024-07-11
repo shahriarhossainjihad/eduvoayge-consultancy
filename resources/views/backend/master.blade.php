@@ -10,7 +10,7 @@
     <meta name="keywords" content="nobleui, bootstrap, bootstrap 5, bootstrap5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>NobleUI - HTML Bootstrap 5 Admin Dashboard Template</title>
+    <title>Eduvoyage Education Consultancy Admin Dashboard</title>
 
     <!-- css here  -->
     @include('backend.body.css')
