@@ -27,13 +27,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('team')}}" class="nav-link">
                     <i class="link-icon" data-feather="calendar"></i>
                     <span class="link-title">Team</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" target="_blank" class="nav-link">
+                <a href="{{route('video.gallery')}}" target="_blank" class="nav-link">
                     <i class="link-icon" data-feather="hash"></i>
                     <span class="link-title">Video Gallery</span>
                 </a>
