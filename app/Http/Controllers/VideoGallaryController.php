@@ -3,44 +3,42 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Team;
+use App\Models\VideoGallary;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class TeamController extends Controller
+class VideoGallaryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('backend.page.team');
+        return view('backend.page.video-gallery');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Show the form for creating a new resource.
      */
     public function store(Request $request)
     {
         // dd($request->all());
         $validator = Validator::make($request->all(), [
-            'name' => 'required|max:255',
-            'position' => 'required|max:255',
+            'title' => 'required|max:255',
         ]);
         if ($validator->passes()) {
-            $team = new Team;
+            $video = new VideoGallary;
             if ($request->image) {
                 $imageName = rand() . '.' . $request->image->extension();
-                $request->image->move(public_path('uploads/team/'), $imageName);
-                $team->photo_url = $imageName;
+                $request->image->move(public_path('uploads/video-gallery/'), $imageName);
+                $video->url = $imageName;
             }
-            $team->name =  $request->name;
-            $team->position = $request->position;
-            $team->bio = $request->bio;
-            $team->save();
+            $video->title =  $request->title;
+            $video->description = $request->description;
+            $video->save();
             return response()->json([
                 'status' => 200,
-                'message' => 'Team Save Successfully',
+                'message' => 'Video Gallery Save Successfully',
             ]);
         } else {
             return response()->json([
@@ -50,15 +48,16 @@ class TeamController extends Controller
         }
     }
 
+
     /**
      * Display the specified resource.
      */
     public function view()
     {
-        $team = Team::get();
+        $video = VideoGallary::get();
         return response()->json([
             "status" => 200,
-            "data" => $team
+            "data" => $video
         ]);
     }
 
@@ -67,11 +66,11 @@ class TeamController extends Controller
      */
     public function edit($id)
     {
-        $team = Team::findOrFail($id);
-        if ($team) {
+        $video = VideoGallary::findOrFail($id);
+        if ($video) {
             return response()->json([
                 'status' => 200,
-                'team' => $team
+                'video' => $video
             ]);
         } else {
             return response()->json([
@@ -87,29 +86,27 @@ class TeamController extends Controller
     public function update(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|max:255',
-            'position' => 'required|max:255',
+            'title' => 'required|max:255',
         ]);
         if ($validator->passes()) {
-            $team = Team::findOrFail($id);
+            $gallery = VideoGallary::findOrFail($id);
             if ($request->image) {
                 $imageName = rand() . '.' . $request->image->extension();
-                $request->image->move(public_path('uploads/team/'), $imageName);
-                if ($team->photo_url) {
-                    $previousImagePath = public_path('uploads/team/') . $team->photo_url;
+                $request->image->move(public_path('uploads/video-gallery/'), $imageName);
+                if ($gallery->url) {
+                    $previousImagePath = public_path('uploads/video-gallery/') . $gallery->url;
                     if (file_exists($previousImagePath)) {
                         unlink($previousImagePath);
                     }
                 }
-                $team->photo_url = $imageName;
+                $gallery->url = $imageName;
             }
-            $team->name =  $request->name;
-            $team->position = $request->position;
-            $team->bio = $request->bio;
-            $team->save();
+            $gallery->title =  $request->title;
+            $gallery->description = $request->description;
+            $gallery->save();
             return response()->json([
                 'status' => 200,
-                'message' => 'Team Update Successfully',
+                'message' => 'Video Gallery Update Successfully',
             ]);
         } else {
             return response()->json([
@@ -124,17 +121,17 @@ class TeamController extends Controller
      */
     public function destroy(string $id)
     {
-        $team = Team::findOrFail($id);
-        if ($team->photo_url) {
-            $previousImagePath = public_path('uploads/team/') . $team->photo_url;
+        $gallery = VideoGallary::findOrFail($id);
+        if ($gallery->url) {
+            $previousImagePath = public_path('uploads/video-gallery/') . $gallery->url;
             if (file_exists($previousImagePath)) {
                 unlink($previousImagePath);
             }
         }
-        $team->delete();
+        $gallery->delete();
         return response()->json([
             'status' => 200,
-            'message' => 'Team Deleted Successfully',
+            'message' => 'Video Gallery Deleted Successfully',
         ]);
     }
 }
