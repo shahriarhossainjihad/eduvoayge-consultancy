@@ -22,7 +22,7 @@
             <li class="nav-item nav-category">Page Content</li>
             <li class="nav-item">
                 <a href="{{route('galary')}}" class="nav-link">
-                    <i class="link-icon" data-feather="message-square"></i>
+                    <i class="link-icon" data-feather="image"></i>
                     <span class="link-title">Gallery</span>
                 </a>
             </li>
@@ -33,14 +33,14 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{route('video.gallery')}}" target="_blank" class="nav-link">
-                    <i class="link-icon" data-feather="hash"></i>
+                <a href="{{route('video.gallery')}}" class="nav-link">
+                    <i class="link-icon" data-feather="video"></i>
                     <span class="link-title">Video Gallery</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" target="_blank" class="nav-link">
-                    <i class="link-icon" data-feather="hash"></i>
+                <a href="#" class="nav-link">
+                    <i class="link-icon" data-feather="settings"></i>
                     <span class="link-title">Service</span>
                 </a>
             </li>

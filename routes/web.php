@@ -3,7 +3,7 @@
 use App\Http\Controllers\GallaryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TeamController;
-use App\Http\Controllers\VideoGallary;
+use App\Http\Controllers\VideoGallaryController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -40,7 +40,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/galary/destroy/{id}', 'destroy')->name('galary.destroy');
     });
 
-    // Team Controller 
+    // Team Controller
     Route::controller(TeamController::class)->group(function () {
         Route::get('/team', 'index')->name('team');
         Route::post('/team/store', 'store')->name('team.store');
@@ -50,8 +50,8 @@ Route::middleware('auth')->group(function () {
         Route::post('/team/status/{id}', 'status')->name('team.status');
         Route::get('/team/destroy/{id}', 'destroy')->name('team.destroy');
     });
-    // Video Gallery Controller 
-    Route::controller(VideoGallary::class)->group(function () {
+    // Video Gallery Controller
+    Route::controller(VideoGallaryController::class)->group(function () {
         Route::get('/video/gallery', 'index')->name('video.gallery');
         Route::post('/video/gallery/store', 'store')->name('video.gallery.store');
         Route::get('/video/gallery/view', 'view')->name('video.gallery.view');

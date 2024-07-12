@@ -121,8 +121,8 @@ class GallaryController extends Controller
     public function destroy(string $id)
     {
         $gallery = Gallary::findOrFail($id);
-        if ($gallery->image) {
-            $previousImagePath = public_path('uploads/gallery/') . $gallery->url;
+        if ($gallery->url) {
+            $previousImagePath = public_path('uploads/galary/') . $gallery->url;
             if (file_exists($previousImagePath)) {
                 unlink($previousImagePath);
             }
