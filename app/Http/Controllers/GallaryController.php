@@ -133,4 +133,16 @@ class GallaryController extends Controller
             'message' => 'Gallery Deleted Successfully',
         ]);
     }
+    public function viewAll(string $id)
+    {
+        $gallery = Gallary::get()->all();
+        if ($gallery->image) {
+            return view('frontend.', compact('products'));
+        }
+        $gallery->delete();
+        return response()->json([
+            'status' => 200,
+            'message' => 'Gallery Deleted Successfully',
+        ]);
+    }
 }
