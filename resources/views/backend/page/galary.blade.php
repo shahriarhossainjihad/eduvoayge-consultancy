@@ -168,7 +168,7 @@
                 }
             });
             $.ajax({
-                url: '/galary/store',
+                url: '/backend/galary/store',
                 type: 'POST',
                 data: formData,
                 processData: false,
@@ -193,7 +193,7 @@
         function galaryView() {
             // console.log('hello');
             $.ajax({
-                url: '/galary/view',
+                url: '/backend/galary/view',
                 method: 'GET',
                 success: function(res) {
                     const galary = res.data;
@@ -254,7 +254,7 @@
                 }
             });
             $.ajax({
-                url: `/galary/edit/${id}`,
+                url: `/backend/galary/edit/${id}`,
                 type: 'GET',
                 success: function(data) {
                     // console.log(data.brand.name);
@@ -289,7 +289,7 @@
                     }
                 });
                 $.ajax({
-                    url: `/galary/update/${id}`,
+                    url: `/backend/galary/update/${id}`,
                     type: 'POST',
                     data: formData,
                     processData: false,
@@ -329,7 +329,7 @@
                             }
                         });
                         $.ajax({
-                            url: `/galary/destroy/${id}`,
+                            url: `/backend/galary/destroy/${id}`,
                             type: 'GET',
                             success: function(res) {
                                 if (res.status == 200) {

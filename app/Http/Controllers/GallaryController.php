@@ -133,16 +133,18 @@ class GallaryController extends Controller
             'message' => 'Gallery Deleted Successfully',
         ]);
     }
-    public function viewAll(string $id)
+
+    public function viewAll()
     {
-        $gallery = Gallary::get()->all();
-        if ($gallery->image) {
-            return view('frontend.', compact('products'));
+        $images = Gallary::all(); 
+
+        if ($images->count() > 0) {
+            return view('frontend.gallary', compact('images'));
         }
-        $gallery->delete();
+
         return response()->json([
             'status' => 200,
-            'message' => 'Gallery Deleted Successfully',
+            'message' => 'Gallery Image Not Found',
         ]);
     }
 }

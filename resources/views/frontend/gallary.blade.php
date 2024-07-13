@@ -1,48 +1,21 @@
 @extends('frontend.master')
 @section('frontend.main')
+
+@if ($images->count() > 0)
 <!-- Gallery -->
 <div class="row">
-    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Boat on Calm Water"
-      />
+    @foreach ($images as $key => $image)
+    <div class="col-md-4 col-sm-6 mb-4 mb-lg-0">
 
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Wintry Mountain Landscape"
-      />
+        <!-- Display the image here -->
+        <img src="{{ asset('/uploads/galary/' . $image->url) }}" alt="{{ $image->description }}" class="w-100 shadow-1-strong rounded mb-4" />
+
+
     </div>
-
-    <div class="col-lg-4 mb-4 mb-lg-0">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Mountains in the Clouds"
-      />
-
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Boat on Calm Water"
-      />
-    </div>
-
-    <div class="col-lg-4 mb-4 mb-lg-0">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Waves at Sea"
-      />
-
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Yosemite National Park"
-      />
-    </div>
-  </div>
-  <!-- Gallery -->
- @endsection
+    @endforeach
+    @else
+    <p>No images found</p>
+    @endif
+</div>
+<!-- Gallery -->
+@endsection

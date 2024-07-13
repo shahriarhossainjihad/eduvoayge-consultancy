@@ -12,9 +12,10 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('frontend.about');
 })->name('about');
-Route::get('/gallary', function () {
-    return view('frontend.gallary');
-})->name('gallary');
+Route::controller(GallaryController::class)->group(function () {
+    Route::get('/gallary', 'viewAll')->name('gallary');
+});
+
 Route::get('/admission', function () {
     return view('frontend.admission');
 })->name('admission');
@@ -31,13 +32,13 @@ Route::middleware('auth')->group(function () {
 
     // Gallery Controller
     Route::controller(GallaryController::class)->group(function () {
-        Route::get('/galary', 'index')->name('galary');
-        Route::post('/galary/store', 'store')->name('galary.store');
-        Route::get('/galary/view', 'view')->name('galary.view');
-        Route::get('/galary/edit/{id}', 'edit')->name('galary.edit');
-        Route::post('/galary/update/{id}', 'update')->name('galary.update');
-        Route::post('/galary/status/{id}', 'status')->name('galary.status');
-        Route::get('/galary/destroy/{id}', 'destroy')->name('galary.destroy');
+        Route::get('backend/galary', 'index')->name('galary');
+        Route::post('backend/galary/store', 'store')->name('galary.store');
+        Route::get('backend/galary/view', 'view')->name('galary.view');
+        Route::get('backend/galary/edit/{id}', 'edit')->name('galary.edit');
+        Route::post('backend/galary/update/{id}', 'update')->name('galary.update');
+        Route::post('backend/galary/status/{id}', 'status')->name('galary.status');
+        Route::get('backend/galary/destroy/{id}', 'destroy')->name('galary.destroy');
     });
 
     // Team Controller
